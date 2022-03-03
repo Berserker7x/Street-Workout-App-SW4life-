@@ -31,7 +31,7 @@
         android:text="  Street Workout "
         android:textColor="@android:color/primary_text_light_nodisable"
         android:textColorHint="@color/black"
-        android:textSize="@dimen/FontSizeview"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
