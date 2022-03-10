@@ -71,7 +71,8 @@
         android:layout_marginBottom="16dp"
         android:textColor="@color/white"
         android:text="Let 's get started"
-        android:background="#ffa500"
+        android:background="@drawable/buttonstyle"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

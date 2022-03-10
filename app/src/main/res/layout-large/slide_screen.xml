@@ -71,6 +71,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:background="#ffa500"
+
         android:text="Let 's get started"
         android:textColor="@color/white"
         android:textSize="20sp"
