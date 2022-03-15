@@ -42,8 +42,8 @@
                 android:layout_height="0dp"
                 app:layout_constraintHeight_percent=".7"
                 tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="5dp"
-                tools:layout_editor_absoluteY="4dp" />
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="16dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.tabs.TabLayout
@@ -147,8 +147,9 @@
         app:layout_constraintVertical_bias="0.061"
         app:layout_constraintWidth_percent=".8" />
 
+
     <Spinner
-        android:id="@+id/spintowin"
+        android:id="@+id/mySpinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -166,6 +167,5 @@
         app:layout_constraintTop_toBottomOf="@+id/username"
         app:layout_constraintVertical_bias="0.07"
         app:layout_constraintWidth_percent=".8" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
