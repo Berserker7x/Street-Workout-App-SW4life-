@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     app:layout_optimizationLevel="all">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,46 +27,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@drawable/vie_bg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent=".78"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1" />
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewpager2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintVertical_bias="0"
-            app:layout_constraintHeight_percent=".7"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_google"
-            android:elevation="35dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="56dp"
             android:backgroundTint="@color/white"
+            android:elevation="35dp"
             android:src="@drawable/google"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewpager2" />
 
@@ -73,41 +45,59 @@
             android:id="@+id/fab_twt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="56dp"
             android:backgroundTint="@color/white"
             android:elevation="35dp"
-            android:src="@drawable/twiter"
 
+            android:src="@drawable/twiter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/fab_google"
-            app:layout_constraintTop_toBottomOf="@+id/viewpager2" />
+            app:layout_constraintStart_toEndOf="@+id/fab_google" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_facebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="56dp"
             android:backgroundTint="@color/white"
             android:elevation="35dp"
             android:src="@drawable/fb"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/fab_google"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewpager2" />
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:layout_width="143dp"
             android:layout_height="116dp"
 
             android:src="@drawable/logo3"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.052" />
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonstyle"
+
+            android:text="Login"
+            android:textColor="@color/white"
+
+            android:textSize="16dp"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/fab_google"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.577"
+            app:layout_constraintWidth_percent=".8" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
     <EditText
         android:id="@+id/email"
@@ -149,11 +139,11 @@
         app:layout_constraintWidth_percent=".8" />
 
     <Button
-        android:id="@+id/loginbtn"
+        android:id="@+id/Signupbtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonstyle"
-        android:text="Login"
+        android:text="Sign Up"
         android:textColor="@color/white"
         android:textSize="16dp"
 
