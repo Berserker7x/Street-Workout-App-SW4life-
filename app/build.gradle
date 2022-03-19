@@ -1,15 +1,23 @@
-plugins {
-    id 'com.android.application'
-}
+
+apply plugin: 'com.android.application'
+// Add the following line:
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+
+
+
+
 
 android {
+
     compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    buildToolsVersion '23.0.1'
+
+
 
     defaultConfig {
         applicationId "com.example.firstapp"
         vectorDrawables.useSupportLibrary = true
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -33,7 +41,12 @@ dependencies {
 //    classpath 'com.android.tools.build:gradle:2.3.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
+
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile ('com.github.nkzawa:socket.io-client:0.4.1'){
+        exclude group: 'org.json', module: 'json'
+    }
+
 
 
 
@@ -50,4 +63,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation platform('com.google.firebase:firebase-bom:29.2.1')
+    implementation 'com.google.firebase:firebase-analytics'
+
 }

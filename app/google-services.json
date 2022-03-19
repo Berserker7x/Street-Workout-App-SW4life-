@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "922144999740",
+    "project_id": "sw4lifeapp",
+    "storage_bucket": "sw4lifeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922144999740:android:e09faf4c2683d5d19a7639",
+        "android_client_info": {
+          "package_name": "com.example.firstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922144999740-ms13db5qqar9tl0ce3p4quo581k69osq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firstapp",
+            "certificate_hash": "df34f7351c14eabce44d8912f74936022e871ee4"
+          }
+        },
+        {
+          "client_id": "922144999740-fm0r8qhbmea143vkus55s6hrcfccnvim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA77fwmAuhppeoj0-n-d4yV8si88eVGoBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922144999740-fm0r8qhbmea143vkus55s6hrcfccnvim.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

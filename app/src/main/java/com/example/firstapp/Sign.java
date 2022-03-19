@@ -22,8 +22,7 @@ import java.util.List;
 
 public class Sign extends AppCompatActivity {
     String[] textArray = { "Set & Reps", "Static", "Dynamic", "complete Sw athlete" };
-    Integer[] imageArray = { R.drawable.serndreps, R.drawable.staticos,
-            R.drawable.dynamic, R.drawable.sw };
+    Integer[] imageArray = { R.drawable.serndreps, R.drawable.staticos, R.drawable.dynamic, R.drawable.sw };
 
 
 
