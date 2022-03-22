@@ -113,7 +113,7 @@ public class Login extends AppCompatActivity {
                                 final String getPassword=snapshot.child(userlogin).child("password").getValue(String.class);
                                 if (getPassword.equals(passlogin)){
                                     Toast.makeText(Login.this,"Welcome",Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(Login.this,MainActivity.class));
+                                    startActivity(new Intent(Login.this,Dashboard.class));
                                     finish();
                                 }
                                 else {
@@ -200,7 +200,7 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this," Existing user ",Toast.LENGTH_SHORT).show();
                     }
                     //start profile activity
-                     startActivity(new Intent(Login.this,MainActivity.class));
+                     startActivity(new Intent(Login.this,Dashboard.class));
                      finish();
 
 
