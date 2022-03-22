@@ -113,7 +113,11 @@ public class Login extends AppCompatActivity {
                                 final String getPassword=snapshot.child(userlogin).child("password").getValue(String.class);
                                 if (getPassword.equals(passlogin)){
                                     Toast.makeText(Login.this,"Welcome",Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(Login.this,Dashboard.class));
+
+                                    Intent i=new Intent(Login.this,Dashboard.class);
+                                    i.putExtra("name",userlogin);
+                                    startActivity(i);
+
                                     finish();
                                 }
                                 else {
