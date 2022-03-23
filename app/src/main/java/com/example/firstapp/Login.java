@@ -97,25 +97,33 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
 
                 final String userlogin=username.getText().toString();
+                Session session;//global variable
+                session = new Session(Login.this); //in oncreate
+//and now        we set sharedpreference then use this like
+
+                session.setusename(userlogin);
                 final String passlogin=password.getText().toString();
                 if(userlogin.isEmpty() || passlogin.isEmpty()){
-                    Log.d("myTag", "logiiiiiiiiiiiiiiiiing ");
+                    Log.d("myTag", "logiiiiiiiiiiiiiiiiing");
                     Toast.makeText(Login.this,"Please enter your username or password",Toast.LENGTH_SHORT).show();
                 }
                 else {
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot snapshot) {
+
                             //check if user exist
                             if(snapshot.hasChild(userlogin)){
+
                                 //yes exist
                                 //password form firebase and test
                                 final String getPassword=snapshot.child(userlogin).child("password").getValue(String.class);
+
                                 if (getPassword.equals(passlogin)){
                                     Toast.makeText(Login.this,"Welcome",Toast.LENGTH_SHORT).show();
 
                                     Intent i=new Intent(Login.this,Dashboard.class);
-                                    i.putExtra("name",userlogin);
+                                    i.putExtra("name",session.getusename());
                                     startActivity(i);
 
                                     finish();

@@ -218,6 +218,7 @@
                 app:cardElevation="5dp">
 
                 <LinearLayout
+                    android:id="@+id/logout"
                     android:layout_width="178dp"
                     android:layout_height="match_parent"
                     android:gravity="center"

@@ -80,6 +80,7 @@ public class Sign extends AppCompatActivity {
                                           final    String passwordvalue=password.getText().toString();
                                           final String usermamevalue=username.getText().toString();
                                           String  categorie = spinner.getSelectedItem().toString();
+                                          Integer score=0;
 
                                           if(emailvalue.isEmpty() || passwordvalue.isEmpty() || usermamevalue.isEmpty() ){
                                               Toast.makeText(Sign.this,"Please fill all fields",Toast.LENGTH_SHORT).show();
@@ -101,6 +102,7 @@ public class Sign extends AppCompatActivity {
                                                           databaseReference.child("users").child(usermamevalue).child("email").setValue(emailvalue);
                                                           databaseReference.child("users").child(usermamevalue).child("password").setValue(passwordvalue);
                                                           databaseReference.child("users").child(usermamevalue).child("categorie").setValue(categorie);
+                                                          databaseReference.child("users").child(usermamevalue).child("score").setValue(score);
                                                           Toast.makeText(Sign.this,"User registred successfully",Toast.LENGTH_SHORT).show();
 
                                                           Intent intent3=new Intent(Sign.this,Login.class);
