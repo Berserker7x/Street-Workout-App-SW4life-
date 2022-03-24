@@ -2,6 +2,7 @@ package com.example.firstapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class Dashboard extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userId;
+    CardView askCard;
 
 
 
@@ -45,6 +47,7 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.dashboard);
         final TextView name = (TextView) findViewById(R.id.usernameid);
         final LinearLayout logoutbtn = findViewById(R.id.logout);
+        final  CardView askCard=findViewById(R.id.askdashboard);
         Intent intent = getIntent();
         final String userSession = intent.getStringExtra("name");
         name.setText("Welcome " + userSession);
@@ -64,6 +67,15 @@ public class Dashboard extends AppCompatActivity {
 
             }
         });
+      askCard.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+
+              Intent i2 = new Intent(Dashboard.this, Askmain.class);
+              startActivity(i2);
+
+          }
+      });
 
 
     }}
