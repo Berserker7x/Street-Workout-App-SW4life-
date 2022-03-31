@@ -39,6 +39,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.UUID;
 
 
@@ -129,6 +130,7 @@ public class Sign extends AppCompatActivity {
                                           final String emailvalue=email.getText().toString();
                                           final    String passwordvalue=password.getText().toString();
                                           final String usermamevalue=username.getText().toString();
+
                                           String  categorie = spinner.getSelectedItem().toString();
                                           Integer score=0;
 
@@ -148,7 +150,7 @@ public class Sign extends AppCompatActivity {
                                                       }
                                                       else {
                                                           //sending data to firebase
-                                                          uploadImage();
+                                                          uploadImage(usermamevalue);
 
 
 
@@ -186,7 +188,7 @@ public class Sign extends AppCompatActivity {
 
                                       }
 
-                                      private void uploadImage() {
+                                      private void uploadImage(String username) {
                                           if(filePath != null)
                                           {
                                               final ProgressDialog progressDialog = new ProgressDialog(Sign.this);
@@ -201,6 +203,17 @@ public class Sign extends AppCompatActivity {
                                                           public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                                                               progressDialog.dismiss();
                                                               Toast.makeText(Sign.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                                                               ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                                   @Override
+                                                                   public void onSuccess(Uri uri) {
+                                                                       HashMap<String,String> hashMap=new HashMap<>();
+                                                                       hashMap.put("imageurl",String.valueOf(uri));
+
+
+
+                                                                       databaseReference.child("users").child(username).child("image").setValue(hashMap);
+                                                                   }
+                                                               });
                                                           }
                                                       })
                                                       .addOnFailureListener(new OnFailureListener() {
