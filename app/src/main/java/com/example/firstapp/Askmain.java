@@ -21,6 +21,7 @@ public class Askmain extends AppCompatActivity {
         setContentView(R.layout.activity_askmain);
        final Button firstFragmentBtn=findViewById(R.id.fragbtn1);
       final  Button  secondFragmentBtn=findViewById(R.id.fragbtn2);
+        replaceFragment(new qst_hub());
 
 
         firstFragmentBtn.setOnClickListener(new View.OnClickListener() {
