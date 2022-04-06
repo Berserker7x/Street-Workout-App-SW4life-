@@ -8,13 +8,13 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 
-public class qst_hub extends Fragment {
+public class home_qst extends Fragment {
     View view2;
 
 
 
 
-    public qst_hub() {
+    public home_qst() {
 
     }
 
@@ -24,13 +24,13 @@ public class qst_hub extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view2= inflater.inflate(R.layout.fragment_qst_hub, container, false);
+        view2= inflater.inflate(R.layout.fragment_home_qst, container, false);
 
 
 
 
 
-    return view2;
+        return view2;
 
 
     }
