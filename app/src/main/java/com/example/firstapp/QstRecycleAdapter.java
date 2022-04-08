@@ -100,7 +100,7 @@ public class QstRecycleAdapter extends RecyclerView.Adapter<QstRecycleAdapter.Vi
                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                     if (task.isSuccessful()) {
                         if (task.getResult().exists()) {
-                            String name = task.getResult().getString("name");
+                            String name = task.getResult().getString("user_id");
                             String image = task.getResult().getString("image");
 
                             // populate both image and username to RwcyclerView
