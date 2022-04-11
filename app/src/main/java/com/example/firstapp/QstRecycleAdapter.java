@@ -100,8 +100,9 @@ public class QstRecycleAdapter extends RecyclerView.Adapter<QstRecycleAdapter.Vi
                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                     if (task.isSuccessful()) {
                         if (task.getResult().exists()) {
-                            String name = task.getResult().getString("user_id");
+                            //String name = task.getResult().getString("user_id");
                             String image = task.getResult().getString("image");
+                            String name ="yasser";
 
                             // populate both image and username to RwcyclerView
 
@@ -227,7 +228,7 @@ public class QstRecycleAdapter extends RecyclerView.Adapter<QstRecycleAdapter.Vi
         holder.BlogCommentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent commentIntent = new Intent(context,Comments.class);
+                Intent commentIntent = new Intent(context,Coments.class);
                 commentIntent.putExtra("BlogPostId",blogPostId);
                 context.startActivity(commentIntent);
             }

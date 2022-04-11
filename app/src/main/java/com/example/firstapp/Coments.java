@@ -29,9 +29,9 @@ import java.util.List;
 import java.util.Map;
 
 
-class Comments extends AppCompatActivity {
+public class Coments extends AppCompatActivity {
 
-   // private Toolbar toolbarNewPost;
+    // private Toolbar toolbarNewPost;
     private String BlogPostId;
     private EditText commentsText;
     private ImageView commentSubmit;
@@ -42,16 +42,15 @@ class Comments extends AppCompatActivity {
     private CommentsRecyclerAdapter commentsRecyclerAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comments);
+        setContentView(R.layout.activity_coments);
         BlogPostId = getIntent().getStringExtra("BlogPostId");
 
 
 
-        getSupportActionBar().setTitle("Comments");
-        //add back button to parent activity
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
 
         commentsText = findViewById(R.id.comment_text);
         commentSubmit = findViewById(R.id.commentSubmit);
@@ -129,3 +128,4 @@ class Comments extends AppCompatActivity {
 
     }
 }
+
